@@ -1,41 +1,46 @@
-import { ArrowDown } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/rail4-logo.jpg";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden pt-20">
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="animate-fade-in">
-          <div className="flex justify-center mb-10">
-            <img src={logo} alt="Rail4 - Wsparcie Transportu Kolejowego" className="h-52 md:h-72 lg:h-80" />
+    <section id="hero" className="relative min-h-[85vh] flex items-center">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-rail-dark/90 via-rail-dark/70 to-transparent" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="max-w-2xl">
+          <div className="mb-6">
+            <img src={logo} alt="Rail4" className="h-20 md:h-28 bg-white rounded-lg p-3 shadow-lg" />
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-extrabold text-rail-dark mb-6 leading-tight">
-            Profesjonalny wynajem
-            <span className="block text-rail-green">pracowników kolejowych</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto">
-            Zapewniamy wykwalifikowany personel kolejowy dla Twojej firmy. 
-            Rewident, ustawiacz, manewrowy — kompleksowe wsparcie branży.
+          <p className="text-rail-yellow font-semibold tracking-wider mb-4 uppercase text-sm">
+            Pracuj z najlepszymi – kolej to my!
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#uslugi" className="btn-primary text-lg">
-              Poznaj nasze usługi
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Wykwalifikowana{" "}
+            <span className="text-rail-yellow">Kadra Kolejowa</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+            Rail4 oferuje kompleksowe usługi kadrowe w sektorze kolejowym. 
+            Zatrudniamy wysoko wykwalifikowanych pracowników gotowych do nowych wyzwań.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#uslugi" className="btn-primary">
+              Dowiedz się więcej
             </a>
-            <a href="#kontakt" className="btn-secondary text-lg">
+            <a href="#kontakt" className="btn-outline">
               Skontaktuj się
             </a>
           </div>
         </div>
-
-        <a 
-          href="#o-nas" 
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-rail-dark/40 hover:text-rail-green transition-colors animate-bounce"
-        >
-          <ArrowDown className="w-8 h-8" />
-        </a>
       </div>
     </section>
   );

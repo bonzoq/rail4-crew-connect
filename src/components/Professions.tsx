@@ -1,109 +1,85 @@
-import { ClipboardCheck, Move, Settings } from "lucide-react";
+import { ClipboardCheck, Move, Settings, ArrowRight } from "lucide-react";
 
 const professions = [
   {
     icon: ClipboardCheck,
     title: "Rewident taboru",
-    shortDesc: "Kontrola techniczna wagonów",
-    description: "Rewident taboru odpowiada za przeprowadzanie oględzin technicznych wagonów i lokomotyw. Sprawdza stan hamulców, układów biegowych, połączeń międzywagonowych oraz innych kluczowych elementów. Jego praca ma fundamentalne znaczenie dla bezpieczeństwa ruchu kolejowego.",
-    responsibilities: [
-      "Oględziny techniczne taboru",
-      "Kontrola stanu hamulców",
-      "Weryfikacja połączeń międzywagonowych",
-      "Wykrywanie usterek i nieprawidłowości",
-    ],
+    shortDesc: "Kontrola techniczna",
+    description: "Odpowiada za przeprowadzanie oględzin technicznych wagonów i lokomotyw. Sprawdza stan hamulców, układów biegowych oraz innych kluczowych elementów bezpieczeństwa.",
   },
   {
     icon: Settings,
     title: "Ustawiacz",
-    shortDesc: "Formowanie składów kolejowych",
-    description: "Ustawiacz zajmuje się formowaniem i rozkładaniem składów pociągów na stacjach rozrządowych i bocznicach. Odpowiada za prawidłowe zestawienie wagonów zgodnie z planem przewozu. To praca wymagająca precyzji i doskonałej znajomości procedur kolejowych.",
-    responsibilities: [
-      "Formowanie składów pociągów",
-      "Rozkładanie składów",
-      "Kontrola dokumentacji wagonowej",
-      "Współpraca z dyżurnym ruchu",
-    ],
+    shortDesc: "Formowanie składów",
+    description: "Zajmuje się formowaniem i rozkładaniem składów pociągów na stacjach rozrządowych i bocznicach. Odpowiada za prawidłowe zestawienie wagonów zgodnie z planem.",
   },
   {
     icon: Move,
     title: "Manewrowy",
-    shortDesc: "Praca manewrowa na stacjach",
-    description: "Manewrowy wykonuje prace związane z przemieszczaniem wagonów na terenie stacji i bocznic. Obsługuje zwrotnice, odpina i przypina wagony, daje sygnały maszyniście. To praca wymagająca sprawności fizycznej, czujności i ścisłego przestrzegania przepisów bezpieczeństwa.",
-    responsibilities: [
-      "Przemieszczanie wagonów",
-      "Obsługa zwrotnic",
-      "Sprzęganie i rozprzęganie taboru",
-      "Dawanie sygnałów ręcznych",
-    ],
+    shortDesc: "Prace manewrowe",
+    description: "Wykonuje prace związane z przemieszczaniem wagonów na terenie stacji i bocznic. Obsługuje zwrotnice, odpina i przypina wagony, daje sygnały maszyniście.",
   },
 ];
 
 const Professions = () => {
   return (
-    <section id="zawody" className="py-20 bg-background">
+    <section id="zawody" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="section-title">
+          <p className="text-rail-green font-semibold tracking-wider mb-3 uppercase text-sm">
+            Nasza kadra
+          </p>
+          <h2 className="section-title mx-auto">
             Zawody <span className="text-rail-green">kolejowe</span>
           </h2>
-          <p className="section-subtitle">
-            Specjalizujemy się w wynajmie pracowników do kluczowych stanowisk w transporcie kolejowym. 
-            Poznaj zawody, których przedstawicieli możemy Ci zapewnić.
+          <p className="section-subtitle mx-auto mt-4">
+            Specjalizujemy się w wynajmie pracowników do kluczowych stanowisk w transporcie kolejowym.
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {professions.map((profession, index) => (
             <div 
               key={index} 
-              className={`flex flex-col lg:flex-row gap-8 items-center ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
+              className="group relative bg-muted rounded-2xl p-8 hover:bg-rail-green transition-all duration-300"
             >
-              <div className="lg:w-1/3">
-                <div className="card-rail text-center lg:text-left">
-                  <div className="w-20 h-20 mx-auto lg:mx-0 mb-6 rounded-2xl bg-gradient-to-br from-rail-green to-rail-green/80 flex items-center justify-center shadow-lg">
-                    <profession.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-rail-dark mb-2">
-                    {profession.title}
-                  </h3>
-                  <p className="text-rail-yellow font-semibold">
-                    {profession.shortDesc}
-                  </p>
-                </div>
+              <div className="w-16 h-16 bg-rail-yellow rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white transition-colors">
+                <profession.icon className="w-8 h-8 text-rail-dark" />
               </div>
-
-              <div className="lg:w-2/3">
-                <div className="bg-muted rounded-xl p-8">
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    {profession.description}
-                  </p>
-                  <div>
-                    <h4 className="font-bold text-rail-dark mb-4">Główne obowiązki:</h4>
-                    <ul className="grid sm:grid-cols-2 gap-3">
-                      {profession.responsibilities.map((resp, i) => (
-                        <li key={i} className="flex items-center gap-3">
-                          <div className="w-2 h-2 rounded-full bg-rail-yellow" />
-                          <span className="text-muted-foreground">{resp}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              
+              <span className="text-sm font-medium text-rail-green group-hover:text-rail-yellow transition-colors">
+                {profession.shortDesc}
+              </span>
+              
+              <h3 className="text-2xl font-bold text-rail-dark group-hover:text-white mt-2 mb-4 transition-colors">
+                {profession.title}
+              </h3>
+              
+              <p className="text-muted-foreground group-hover:text-white/80 leading-relaxed mb-6 transition-colors">
+                {profession.description}
+              </p>
+              
+              <a 
+                href="#kontakt" 
+                className="inline-flex items-center gap-2 text-rail-green font-semibold group-hover:text-rail-yellow transition-colors"
+              >
+                Zapytaj o dostępność
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center p-8 bg-rail-green/10 rounded-2xl border border-rail-green/20">
-          <p className="text-lg text-rail-dark mb-2">
-            <strong>Szukasz innych specjalistów?</strong>
+        <div className="mt-16 text-center p-8 bg-rail-dark rounded-2xl">
+          <p className="text-white text-lg mb-2">
+            <strong className="text-rail-yellow">Szukasz innych specjalistów?</strong>
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-white/70 mb-6">
             Nasza oferta stale się rozwija. Skontaktuj się z nami, a postaramy się spełnić Twoje wymagania kadrowe.
           </p>
+          <a href="#kontakt" className="btn-primary">
+            Skontaktuj się
+          </a>
         </div>
       </div>
     </section>

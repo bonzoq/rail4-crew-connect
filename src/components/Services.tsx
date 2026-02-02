@@ -1,25 +1,29 @@
-import { Train, UserCheck, Briefcase, Handshake } from "lucide-react";
+import { Users, Train, GraduationCap, Wrench } from "lucide-react";
 
 const services = [
   {
-    icon: UserCheck,
+    icon: Users,
     title: "Wynajem pracowników",
     description: "Udostępniamy wykwalifikowany personel kolejowy na potrzeby Twojej firmy. Elastyczne warunki współpracy dostosowane do Twoich potrzeb.",
+    color: "bg-rail-green",
   },
   {
     icon: Train,
-    title: "Obsługa kolejowa",
-    description: "Zapewniamy kompleksową obsługę procesów kolejowych - od rewizji przez manewry po ustawianie składów.",
+    title: "Obsługa bocznic",
+    description: "Oferujemy obsługę bocznic kolejowych w zakresie czynności techniczno-ruchowych. Pozwala to na obniżenie kosztów funkcjonowania bocznicy.",
+    color: "bg-rail-yellow",
   },
   {
-    icon: Briefcase,
-    title: "Wsparcie operacyjne",
-    description: "Pomagamy w rozwiązywaniu bieżących wyzwań kadrowych, reagując szybko na Twoje potrzeby.",
+    icon: GraduationCap,
+    title: "Szkolenia kolejowe",
+    description: "Prowadzimy szkolenia dla osób chcących związać swoją przyszłość z koleją. Oferujemy również pouczenia okresowe dla pracowników.",
+    color: "bg-rail-green",
   },
   {
-    icon: Handshake,
-    title: "Współpraca długoterminowa",
-    description: "Budujemy trwałe relacje z naszymi klientami, oferując stabilne i przewidywalne warunki współpracy.",
+    icon: Wrench,
+    title: "Wsparcie techniczne",
+    description: "Zapewniamy kompleksowe wsparcie techniczne dla firm kolejowych. Pomagamy w rozwiązywaniu bieżących wyzwań operacyjnych.",
+    color: "bg-rail-yellow",
   },
 ];
 
@@ -28,10 +32,13 @@ const Services = () => {
     <section id="uslugi" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="section-title">
-            Nasze <span className="text-rail-yellow">usługi</span>
+          <p className="text-rail-green font-semibold tracking-wider mb-3 uppercase text-sm">
+            Nasza oferta
+          </p>
+          <h2 className="section-title mx-auto">
+            Co możemy dla Ciebie <span className="text-rail-green">zrobić</span>?
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle mx-auto mt-4">
             Oferujemy kompleksowe wsparcie kadrowe dla firm z branży kolejowej. 
             Skup się na swoim biznesie — my zajmiemy się personelem.
           </p>
@@ -41,15 +48,15 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="card-rail group hover:bg-rail-green hover:border-rail-green"
+              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
-              <div className="w-16 h-16 mb-6 rounded-2xl bg-rail-yellow/20 group-hover:bg-white/20 flex items-center justify-center transition-colors">
-                <service.icon className="w-8 h-8 text-rail-green group-hover:text-white transition-colors" />
+              <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                <service.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-rail-dark group-hover:text-white mb-3 transition-colors">
+              <h3 className="text-xl font-bold text-rail-dark mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground group-hover:text-white/80 transition-colors">
+              <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
             </div>

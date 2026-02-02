@@ -1,23 +1,24 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const Contact = () => {
   return (
     <section id="kontakt" className="py-20 bg-rail-dark">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Skontaktuj się <span className="text-rail-yellow">z nami</span>
-          </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Masz pytania dotyczące naszych usług? Potrzebujesz wsparcia kadrowego? 
-            Skontaktuj się z nami — odpowiemy jak najszybciej.
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Contact Info */}
-            <div className="space-y-8">
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Left Column - Info */}
+          <div>
+            <p className="text-rail-yellow font-semibold tracking-wider mb-3 uppercase text-sm">
+              Kontakt
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Skontaktuj się <span className="text-rail-yellow">z nami</span>
+            </h2>
+            <p className="text-white/70 text-lg mb-10 leading-relaxed">
+              Masz pytania dotyczące naszych usług? Potrzebujesz wsparcia kadrowego? 
+              Napisz do nas — odpowiemy jak najszybciej.
+            </p>
+            
+            <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-xl bg-rail-green flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-white" />
@@ -26,13 +27,10 @@ const Contact = () => {
                   <h3 className="text-white font-bold text-lg mb-1">Email</h3>
                   <a 
                     href="mailto:biuro@rail4.pl" 
-                    className="text-rail-yellow hover:text-rail-yellow/80 transition-colors text-lg"
+                    className="text-rail-yellow hover:underline text-lg"
                   >
                     biuro@rail4.pl
                   </a>
-                  <p className="text-gray-400 text-sm mt-1">
-                    Odpowiadamy w ciągu 24h
-                  </p>
                 </div>
               </div>
 
@@ -42,12 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg mb-1">Telefon</h3>
-                  <p className="text-gray-300 text-lg">
-                    Wkrótce
-                  </p>
-                  <p className="text-gray-400 text-sm mt-1">
-                    Numer kontaktowy pojawi się niebawem
-                  </p>
+                  <p className="text-white/70 text-lg">Wkrótce</p>
                 </div>
               </div>
 
@@ -57,46 +50,44 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg mb-1">Lokalizacja</h3>
-                  <p className="text-gray-300">
-                    Polska
-                  </p>
-                  <p className="text-gray-400 text-sm mt-1">
-                    Działamy na terenie całego kraju
-                  </p>
+                  <p className="text-white/70">Działamy na terenie całej Polski</p>
                 </div>
               </div>
             </div>
-
-            {/* CTA Card */}
-            <div className="bg-gradient-to-br from-rail-green to-rail-green/80 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">
-                Potrzebujesz pracowników?
-              </h3>
-              <p className="text-white/80 mb-6">
-                Napisz do nas i przedstaw swoje potrzeby kadrowe. Przygotujemy dla Ciebie 
-                indywidualną ofertę współpracy.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-rail-yellow" />
-                  <span>Szybka odpowiedź</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-rail-yellow" />
-                  <span>Wykwalifikowany personel</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-rail-yellow" />
-                  <span>Elastyczne warunki</span>
-                </li>
-              </ul>
-              <a 
-                href="mailto:biuro@rail4.pl" 
-                className="inline-block w-full text-center bg-rail-yellow text-rail-dark font-bold py-4 px-6 rounded-xl hover:brightness-110 transition-all"
-              >
-                Wyślij zapytanie
-              </a>
+          </div>
+          
+          {/* Right Column - CTA */}
+          <div className="bg-white rounded-2xl p-8 lg:p-10">
+            <h3 className="text-2xl font-bold text-rail-dark mb-4">
+              Potrzebujesz pracowników?
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              Napisz do nas i przedstaw swoje potrzeby kadrowe. Przygotujemy dla Ciebie 
+              indywidualną ofertę współpracy.
+            </p>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                <div className="w-3 h-3 rounded-full bg-rail-green" />
+                <span className="text-rail-dark">Szybka odpowiedź w 24h</span>
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                <div className="w-3 h-3 rounded-full bg-rail-green" />
+                <span className="text-rail-dark">Wykwalifikowany personel</span>
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                <div className="w-3 h-3 rounded-full bg-rail-green" />
+                <span className="text-rail-dark">Elastyczne warunki współpracy</span>
+              </div>
             </div>
+            
+            <a 
+              href="mailto:biuro@rail4.pl" 
+              className="btn-secondary w-full justify-center gap-2"
+            >
+              <Send className="w-5 h-5" />
+              Wyślij zapytanie
+            </a>
           </div>
         </div>
       </div>

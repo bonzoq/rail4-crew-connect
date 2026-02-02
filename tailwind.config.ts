@@ -70,7 +70,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

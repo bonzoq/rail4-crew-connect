@@ -1,29 +1,20 @@
-import { Users, Train, GraduationCap, Wrench } from "lucide-react";
+import { Users, Settings, Move, ClipboardCheck } from "lucide-react";
 
-const services = [
+const teamMembers = [
   {
-    icon: Users,
-    title: "Wynajem pracowników",
-    description: "Udostępniamy wykwalifikowany personel kolejowy na potrzeby Twojej firmy. Elastyczne warunki współpracy dostosowane do Twoich potrzeb.",
-    color: "bg-rail-green",
+    icon: Settings,
+    title: "Ustawiacz",
+    shortDesc: "Koordynacja manewrów",
   },
   {
-    icon: Train,
-    title: "Obsługa bocznic",
-    description: "Oferujemy obsługę bocznic kolejowych w zakresie czynności techniczno-ruchowych. Pozwala to na obniżenie kosztów funkcjonowania bocznicy.",
-    color: "bg-rail-yellow",
+    icon: Move,
+    title: "Manewrowy",
+    shortDesc: "Realizacja operacji",
   },
   {
-    icon: GraduationCap,
-    title: "Szkolenia kolejowe",
-    description: "Prowadzimy szkolenia dla osób chcących związać swoją przyszłość z koleją. Oferujemy również pouczenia okresowe dla pracowników.",
-    color: "bg-rail-green",
-  },
-  {
-    icon: Wrench,
-    title: "Wsparcie techniczne",
-    description: "Zapewniamy kompleksowe wsparcie techniczne dla firm kolejowych. Pomagamy w rozwiązywaniu bieżących wyzwań operacyjnych.",
-    color: "bg-rail-yellow",
+    icon: ClipboardCheck,
+    title: "Rewident taboru",
+    shortDesc: "Nadzór techniczny",
   },
 ];
 
@@ -38,28 +29,100 @@ const Services = () => {
           <h2 className="section-title mx-auto">
             Co możemy dla Ciebie <span className="text-rail-green">zrobić</span>?
           </h2>
-          <p className="section-subtitle mx-auto mt-4">
-            Oferujemy kompleksowe wsparcie kadrowe dla firm z branży kolejowej. 
-            Skup się na swoim biznesie — my zajmiemy się personelem.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <service.icon className="w-8 h-8 text-white" />
+        {/* Main Service Card */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-rail-green rounded-2xl flex items-center justify-center">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-rail-dark mb-3">
-                {service.title}
+              <h3 className="text-2xl lg:text-3xl font-bold text-rail-dark">
+                Wynajem pracowników
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
             </div>
+            
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Zapewniamy profesjonalny outsourcing wykwalifikowanego personelu w obszarze bezpieczeństwa 
+              ruchu kolejowego. Nasz zespół tworzą doświadczeni manewrowi, ustawiacze oraz rewidenci taboru, 
+              gotowi do wsparcia Państwa operacji zarówno w trybie ad-hoc, jak i w ramach stałych harmonogramów.
+            </p>
+            
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Priorytetem jest dla nas precyzyjna realizacja oczekiwań klienta, dlatego elastyczność 
+              łączymy z bezkompromisowym podejściem do bezpieczeństwa i jakości świadczonych usług.
+            </p>
+
+            {/* Service Categories */}
+            <div className="grid md:grid-cols-2 gap-6 mt-10">
+              <div className="bg-muted rounded-xl p-6">
+                <h4 className="font-bold text-rail-dark mb-3 text-lg">
+                  1. Obsługa manewrowa i zestawianie składów
+                </h4>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Zapewniamy pełne wsparcie operacyjne na stacjach i bocznicach kolejowych, 
+                  gwarantując płynność procesów logistycznych.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span><strong>Ustawiacze taboru:</strong> Koordynacja i planowanie prac manewrowych</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span><strong>Manewrowi:</strong> Fizyczna realizacja operacji sprzęgania i rozprzęgania</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-muted rounded-xl p-6">
+                <h4 className="font-bold text-rail-dark mb-3 text-lg">
+                  2. Nadzór techniczny i dopuszczenie do ruchu
+                </h4>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Gwarantujemy najwyższą rzetelność w ocenie stanu technicznego taboru, 
+                  eliminując ryzyko awarii na szlaku.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span><strong>Rewidenci taboru:</strong> Szczegółowe oględziny techniczne wagonów i lokomotyw</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span>Wykonywanie prób hamulca i wystawianie dokumentacji technicznej</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div className="text-center mb-10">
+          <h3 className="text-2xl font-bold text-rail-dark">
+            Nasza <span className="text-rail-green">kadra</span>
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <a 
+              key={index}
+              href="#zawody"
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-center"
+            >
+              <div className="w-16 h-16 bg-rail-yellow rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                <member.icon className="w-8 h-8 text-rail-dark" />
+              </div>
+              <h4 className="text-xl font-bold text-rail-dark mb-2">
+                {member.title}
+              </h4>
+              <p className="text-muted-foreground text-sm">
+                {member.shortDesc}
+              </p>
+            </a>
           ))}
         </div>
       </div>

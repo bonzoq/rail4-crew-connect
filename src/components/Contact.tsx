@@ -14,7 +14,7 @@ const Contact = () => {
               Skontaktuj się <span className="text-rail-yellow">z nami</span>
             </h2>
             <p className="text-white/70 text-lg mb-10 leading-relaxed">
-              Masz pytania dotyczące naszych usług? Potrzebujesz wsparcia kadrowego? 
+              Czy jest coś, co możemy dla Ciebie zrobić? 
               Napisz do nas — odpowiemy jak najszybciej.
             </p>
             
@@ -69,7 +69,7 @@ const Contact = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
                 <div className="w-3 h-3 rounded-full bg-rail-green" />
-                <span className="text-rail-dark">Szybka odpowiedź w 24h</span>
+                <span className="text-rail-dark">Orientacja na klienta</span>
               </div>
               <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
                 <div className="w-3 h-3 rounded-full bg-rail-green" />

@@ -1,15 +1,14 @@
-import { CheckCircle, Users, Shield, Clock } from "lucide-react";
+import { CheckCircle, Users, Clock } from "lucide-react";
 
 const benefits = [
-  "Szybko i skutecznie uzupełnisz braki kadrowe",
-  "Zyskasz wykwalifikowaną kadrę kolejową",
-  "Ograniczysz koszty zatrudnienia",
-  "Zapomnisz o ustawowych obowiązkach pracodawcy",
+  "Pełna zgodność prawna – przejmujemy obowiązki związane z monitorowaniem ważności uprawnień",
+  "Elastyczność operacyjna – dostosowujemy liczbę personelu do aktualnego natężenia ruchu",
+  "Redukcja ryzyka – gwarantujemy obsadę stanowisk przez osoby o wysokiej odporności na stres",
+  "Optymalizacja kosztów pracy – płacisz za realnie wykonaną pracę",
 ];
 
 const stats = [
   { icon: Users, value: "50+", label: "Pracowników" },
-  { icon: Shield, value: "100%", label: "Uprawnienia" },
   { icon: Clock, value: "24/7", label: "Dostępność" },
 ];
 
@@ -21,18 +20,20 @@ const About = () => {
           {/* Left Column - Content */}
           <div>
             <p className="text-rail-green font-semibold tracking-wider mb-3 uppercase text-sm">
-              Rail4 Sp. z o.o.
+              Kim jesteśmy
             </p>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rail-dark mb-6 leading-tight">
-              Rozwiązujemy{" "}
-              <span className="text-rail-green">problemy kadrowe</span>{" "}
+              Kompleksowe wsparcie{" "}
+              <span className="text-rail-green">kadrowe</span>{" "}
               w sektorze kolejowym
             </h2>
             
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Specjalizujemy się w leasingu pracowników kolejowych. Zapewniamy kompleksową 
-              obsługę kadrową, dzięki której możesz skupić się na swojej podstawowej działalności.
+              Rail4 oferuje kompleksowe wsparcie w obszarze personelu bezpośrednio odpowiedzialnego 
+              za bezpieczeństwo i prowadzenie ruchu kolejowego. Zapewniamy wykwalifikowane kadry, 
+              które posiadają wszelkie niezbędne uprawnienia, aktualne badania lekarskie oraz 
+              cykliczne szkolenia wymagane przez Urząd Transportu Kolejowego (UTK).
             </p>
             
             <ul className="space-y-4 mb-8">
@@ -73,13 +74,37 @@ const About = () => {
               </div>
               
               <div className="mt-8 pt-8 border-t border-border pl-6">
-                <p className="text-muted-foreground italic">
-                  "Naszym celem jest zapewnienie firmom transportowym elastycznego 
-                  dostępu do sprawdzonego personelu kolejowego."
-                </p>
+                <h4 className="text-lg font-bold text-rail-dark mb-4">
+                  Stabilność operacyjna i eliminacja deficytu kadr
+                </h4>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span>Ciągłość ruchu bez przestojów – eliminujemy ryzyko wstrzymania operacji</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span>Zarządzanie czasem pracy zgodnie z ustawą o transporcie kolejowym</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rail-green font-bold">•</span>
+                    <span>Gotowość operacyjna 24/7</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center p-8 bg-rail-dark rounded-2xl">
+          <p className="text-white text-lg mb-2">
+            <strong className="text-rail-yellow">Rail4</strong>
+          </p>
+          <p className="text-white/70 mb-0">
+            Zapewniamy kompleksową obsługę kadrową, pozwalając naszym Partnerom na pełną koncentrację 
+            na terminowej realizacji procesów przewozowych.
+          </p>
         </div>
       </div>
     </section>

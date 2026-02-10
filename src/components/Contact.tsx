@@ -59,7 +59,7 @@ const Contact = () => {
           {/* Right Column - CTA */}
           <div className="bg-white rounded-2xl p-8 lg:p-10">
             <h3 className="text-2xl font-bold text-rail-dark mb-4">
-              Potrzebujesz pracowników?
+              Czy jest coś, co możemy dla Ciebie zrobić?
             </h3>
             <p className="text-muted-foreground mb-8">
               Napisz do nas i przedstaw swoje potrzeby kadrowe. Przygotujemy dla Ciebie 

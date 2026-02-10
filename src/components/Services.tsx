@@ -1,18 +1,18 @@
-import { Users, Settings, Move, ClipboardCheck } from "lucide-react";
+import { Users, Settings, Move } from "lucide-react";
 
 const teamMembers = [
   {
-    icon: Settings,
+    icon: Move,
     title: "Ustawiacz",
     shortDesc: "Koordynacja manewrów",
   },
   {
-    icon: Move,
+    icon: Users,
     title: "Manewrowy",
     shortDesc: "Realizacja operacji",
   },
   {
-    icon: ClipboardCheck,
+    icon: Settings,
     title: "Rewident taboru",
     shortDesc: "Nadzór techniczny",
   },
@@ -54,48 +54,6 @@ const Services = () => {
               łączymy z bezkompromisowym podejściem do bezpieczeństwa i jakości świadczonych usług.
             </p>
 
-            {/* Service Categories */}
-            <div className="grid md:grid-cols-2 gap-6 mt-10">
-              <div className="bg-muted rounded-xl p-6">
-                <h4 className="font-bold text-rail-dark mb-3 text-lg">
-                  1. Obsługa manewrowa i zestawianie składów
-                </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Zapewniamy pełne wsparcie operacyjne na stacjach i bocznicach kolejowych, 
-                  gwarantując płynność procesów logistycznych.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-rail-green font-bold">•</span>
-                    <span><strong>Ustawiacze taboru:</strong> Koordynacja i planowanie prac manewrowych</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-rail-green font-bold">•</span>
-                    <span><strong>Manewrowi:</strong> Fizyczna realizacja operacji sprzęgania i rozprzęgania</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-muted rounded-xl p-6">
-                <h4 className="font-bold text-rail-dark mb-3 text-lg">
-                  2. Nadzór techniczny i dopuszczenie do ruchu
-                </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  Gwarantujemy najwyższą rzetelność w ocenie stanu technicznego taboru, 
-                  eliminując ryzyko awarii na szlaku.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-rail-green font-bold">•</span>
-                    <span><strong>Rewidenci taboru:</strong> Szczegółowe oględziny techniczne wagonów i lokomotyw</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-rail-green font-bold">•</span>
-                    <span>Wykonywanie prób hamulca i wystawianie dokumentacji technicznej</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
 

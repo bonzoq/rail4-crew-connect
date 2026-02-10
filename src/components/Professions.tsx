@@ -1,8 +1,8 @@
-import { Settings, Move, ClipboardCheck, ArrowRight } from "lucide-react";
+import { Settings, Move, Users, ArrowRight } from "lucide-react";
 
 const professions = [
   {
-    icon: Settings,
+    icon: Move,
     title: "Ustawiacz",
     shortDesc: "Kluczowe ogniwo logistyki kolejowej",
     description: `W dobie dynamicznego rozwoju transportu szynowego, zawód ustawiacza taboru staje się filarem sprawnej obsługi procesów logistycznych. To stanowisko łączące w sobie specjalistyczną wiedzę techniczną z wysoką odpowiedzialnością i umiejętnością błyskawicznego podejmowania decyzji.`,
@@ -14,7 +14,7 @@ const professions = [
     ],
   },
   {
-    icon: Move,
+    icon: Users,
     title: "Manewrowy",
     shortDesc: "Fundament operacji stacyjnych",
     description: `W złożonym organizmie transportu kolejowego manewrowy taboru pełni rolę wykonawczą o kluczowym znaczeniu dla płynności ruchu. Jest to zawód dedykowany osobom, które potrafią łączyć sprawność fizyczną z precyzją, doskonałą komunikacją oraz umiejętnością błyskawicznej reakcji na zmieniające się warunki pracy.`,
@@ -26,7 +26,7 @@ const professions = [
     ],
   },
   {
-    icon: ClipboardCheck,
+    icon: Settings,
     title: "Rewident taboru",
     shortDesc: "Gwarant bezpieczeństwa i sprawności technicznej",
     description: `Rewident taboru kolejowego to kluczowy ekspert, od którego decyzji zależy dopuszczenie składu do ruchu. Jego praca stanowi fundament bezpieczeństwa systemowego na kolei, wymagając nie tylko rozległej wiedzy z zakresu budowy pojazdów, ale także bezkompromisowej rzetelności w ocenie stanu technicznego lokomotyw i wagonów.`,

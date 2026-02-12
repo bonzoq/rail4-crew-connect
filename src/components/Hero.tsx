@@ -5,7 +5,7 @@ const Hero = () => {
     <section id="hero" className="relative min-h-[85vh] flex items-center">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-[center_top_30%] bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-rail-dark/90 via-rail-dark/70 to-transparent" />

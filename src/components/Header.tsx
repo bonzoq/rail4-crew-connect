@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg py-2" : "bg-white py-4"
+        isScrolled ? "bg-white shadow-lg py-1" : "bg-white py-2"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -33,7 +33,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Rail4" 
-              className="h-20 md:h-24 lg:h-28 rounded-lg"
+              className="h-14 md:h-16 lg:h-20 rounded-lg"
             />
           </a>
 

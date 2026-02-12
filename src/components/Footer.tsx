@@ -1,4 +1,4 @@
-import logo from "@/assets/rail4-logo.jpg";
+import logo from "@/assets/rail4-logo.png";
 
 const Footer = () => {
   return (

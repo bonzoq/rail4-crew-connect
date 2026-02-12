@@ -1,4 +1,4 @@
-import { Users, Settings, Move } from "lucide-react";
+import { CheckSquare, Settings, Move, Users } from "lucide-react";
 
 const teamMembers = [
   {
@@ -7,7 +7,7 @@ const teamMembers = [
     shortDesc: "Koordynacja manewrów",
   },
   {
-    icon: Users,
+    icon: CheckSquare,
     title: "Manewrowy",
     shortDesc: "Realizacja operacji",
   },

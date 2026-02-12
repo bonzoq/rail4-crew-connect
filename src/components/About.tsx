@@ -1,10 +1,23 @@
-import { CheckCircle, Users, Clock } from "lucide-react";
+import { Users, Clock } from "lucide-react";
 
-const benefits = [
-  "Pełna zgodność prawna – przejmujemy obowiązki związane z monitorowaniem ważności uprawnień",
-  "Elastyczność operacyjna – dostosowujemy liczbę personelu do aktualnego natężenia ruchu",
-  "Redukcja ryzyka – gwarantujemy obsadę stanowisk przez osoby o wysokiej odporności na stres",
-  "Optymalizacja kosztów pracy – płacisz za realnie wykonaną pracę",
+const serviceBlocks = [
+  {
+    number: "1",
+    title: "Obsługa manewrowa i zestawianie składów",
+    description: "Zapewniamy pełne wsparcie operacyjne na stacjach i bocznicach kolejowych, gwarantując płynność procesów logistycznych:",
+    items: [
+      { role: "Ustawiacze taboru", desc: "Koordynacja i planowanie prac manewrowych, nadzór nad bezpieczeństwem formowania składów oraz precyzyjne kierowanie ruchem na bocznicy." },
+      { role: "Manewrowi", desc: "Fizyczna realizacja operacji sprzęgania, rozprzęgania oraz zabezpieczania wagonów przed zbiegnięciem. Obsługa punktów ładunkowych zgodnie z restrykcyjnymi procedurami BHP." },
+    ],
+  },
+  {
+    number: "2",
+    title: "Nadzór techniczny i dopuszczenie do ruchu",
+    description: "Gwarantujemy najwyższą rzetelność w ocenie stanu technicznego taboru, eliminując ryzyko awarii na szlaku:",
+    items: [
+      { role: "Rewidenci taboru", desc: "Przeprowadzanie szczegółowych oględzin technicznych wagonów i lokomotyw. Wykonywanie prób hamulca (uproszczonych i pełnych) oraz wystawianie dokumentacji technicznej (m.in. karty próby hamulca) niezbędnej do wyprawienia pociągu." },
+    ],
+  },
 ];
 
 const stats = [
@@ -36,14 +49,27 @@ const About = () => {
               cykliczne szkolenia wymagane przez Urząd Transportu Kolejowego (UTK).
             </p>
             
-            <ul className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-rail-green flex-shrink-0 mt-0.5" />
-                  <span className="text-rail-dark">{benefit}</span>
-                </li>
+            <div className="space-y-8 mb-8">
+              {serviceBlocks.map((block, index) => (
+                <div key={index}>
+                  <h4 className="text-lg font-bold text-rail-dark mb-2">
+                    <span className="text-rail-green mr-2">{block.number}.</span>
+                    {block.title}
+                  </h4>
+                  <p className="text-muted-foreground mb-3">{block.description}</p>
+                  <ul className="space-y-3 ml-4">
+                    {block.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-rail-green font-bold mt-0.5">•</span>
+                        <span className="text-rail-dark">
+                          <strong>{item.role}:</strong> {item.desc}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
             
             <a href="#kontakt" className="btn-secondary">
               Skontaktuj się z nami

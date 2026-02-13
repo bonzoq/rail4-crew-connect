@@ -13,6 +13,10 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-2xl">
+          <p className="text-rail-yellow font-semibold tracking-wider mb-4 uppercase text-sm">
+            Rail4 wsparcie dla kolei
+          </p>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Profesjonalni{" "}
             <span className="text-rail-yellow">Pracownicy</span>

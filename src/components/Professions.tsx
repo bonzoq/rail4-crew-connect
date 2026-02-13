@@ -1,4 +1,4 @@
-import { Settings, Move, Users, ArrowRight } from "lucide-react";
+import { Settings, Move, CheckSquare, ArrowRight } from "lucide-react";
 
 const professions = [
   {
@@ -14,7 +14,7 @@ const professions = [
     ],
   },
   {
-    icon: Users,
+    icon: CheckSquare,
     title: "Manewrowy",
     shortDesc: "Fundament operacji stacyjnych",
     description: `W złożonym organizmie transportu kolejowego manewrowy taboru pełni rolę wykonawczą o kluczowym znaczeniu dla płynności ruchu. Jest to zawód dedykowany osobom, które potrafią łączyć sprawność fizyczną z precyzją, doskonałą komunikacją oraz umiejętnością błyskawicznej reakcji na zmieniające się warunki pracy.`,

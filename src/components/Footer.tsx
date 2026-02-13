@@ -19,9 +19,13 @@ const Footer = () => {
             <a href="#kontakt" className="text-rail-dark font-bold hover:text-rail-green transition-colors">Kontakt</a>
           </nav>
           
-          <div className="text-rail-dark font-bold text-sm">
-            © {new Date().getFullYear()} Rail4. Wszystkie prawa zastrzeżone.
-          </div>
+        </div>
+        
+        <div className="mt-8 pt-6 border-t border-gray-200 text-right text-xs text-muted-foreground">
+          <p>Copyright © {new Date().getFullYear()} Rail4. Wszelkie prawa zastrzeżone.</p>
+          <p className="mt-1">
+            Zapoznałem się z Polityką Prywatności i wyrażam zgodę na przetwarzanie moich danych w celu udzielenia odpowiedzi na zapytanie ofertowe.
+          </p>
         </div>
       </div>
     </footer>

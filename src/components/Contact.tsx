@@ -13,7 +13,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Skontaktuj się <span className="text-rail-yellow">z nami</span>
             </h2>
-            <p className="text-white/50 text-sm font-semibold mb-6">Rail4 Marcin Baryła | NIP: 6443250710 | REGON: 544186880</p>
+            <p className="text-white/60 text-base font-semibold mb-6">Rail4 Marcin Baryła | NIP: 6443250710 | REGON: 544186880</p>
             <p className="text-white/70 text-lg mb-10 leading-relaxed">
               Czy jest coś, co możemy dla Ciebie zrobić? 
               Napisz do nas — odpowiemy jak najszybciej.

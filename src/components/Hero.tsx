@@ -4,10 +4,10 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-[85vh] flex items-center">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-[center_top_30%] bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+        style={{ backgroundImage: `url(${heroBg})` }}>
+        
         <div className="absolute inset-0 bg-gradient-to-r from-rail-dark/90 via-rail-dark/70 to-transparent" />
       </div>
 
@@ -19,7 +19,7 @@ const Hero = () => {
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Profesjonalni{" "}
-            <span className="text-rail-yellow">Pracownicy</span>
+            <span className="text-destructive">Pracownicy</span>
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
@@ -37,8 +37,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;

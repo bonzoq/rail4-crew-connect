@@ -23,14 +23,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      - uses: oven-sh/setup-bun@v2
 
-      - run: npm ci
+      - run: bun install
 
-      - run: npx vite build --base=/rail4-crew-connect/
+      - run: bunx vite build --base=/rail4-crew-connect/
 
       - name: Copy index.html to 404.html for SPA routing
         run: cp dist/index.html dist/404.html

@@ -50,7 +50,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg mb-1">Lokalizacja</h3>
-                  <p className="text-white/70">Działamy na terenie całej Polski</p>
+                  <p className="text-white/70">ul. Zygmunta Krasińskiego 29/9, 40-019 Katowice</p>
+                  <p className="text-white/70 text-sm mt-1">Działamy na terenie całej Polski</p>
                 </div>
               </div>
             </div>

@@ -21,11 +21,19 @@ const Footer = () => {
           
         </div>
         
-        <div className="mt-8 pt-6 border-t border-gray-200 text-right text-xs text-muted-foreground">
-          <p>Copyright © {new Date().getFullYear()} Rail4. Wszelkie prawa zastrzeżone.</p>
-          <p className="mt-1">
-            Zapoznałem się z Polityką Prywatności i wyrażam zgodę na przetwarzanie moich danych w celu udzielenia odpowiedzi na zapytanie ofertowe.
-          </p>
+        <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between gap-4 text-xs text-muted-foreground">
+          <div>
+            <p className="font-semibold text-rail-dark">Rail4 Marcin Baryła</p>
+            <p>NIP: 6443250710 | REGON: 544186880</p>
+            <p>ul. Zygmunta Krasińskiego 29/9, 40-019 Katowice</p>
+            <p>Tel: +48 455 527 949</p>
+          </div>
+          <div className="text-right">
+            <p>Copyright © {new Date().getFullYear()} Rail4. Wszelkie prawa zastrzeżone.</p>
+            <p className="mt-1">
+              Zapoznałem się z Polityką Prywatności i wyrażam zgodę na przetwarzanie moich danych w celu udzielenia odpowiedzi na zapytanie ofertowe.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

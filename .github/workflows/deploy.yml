@@ -27,7 +27,7 @@ jobs:
 
       - run: bun install
 
-      - run: bunx vite build --base=/rail4-crew-connect/
+      - run: bunx vite build --base=/
 
       - name: Copy index.html to 404.html for SPA routing
         run: cp dist/index.html dist/404.html
